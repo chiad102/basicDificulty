@@ -3,13 +3,13 @@ public class Employee {
     private int department;
     private int salary;
     private static int counter;
-    private final int id;
+    private int id;
 
-    public Employee(String name, int department, int salary, int id) {
+    public Employee(String name, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
-        this.id = ++counter;
+        id = ++counter;
     }
 
     public String getName() {
@@ -44,5 +44,4 @@ public class Employee {
                 ", Зарплата = " + salary +
                 ", id = " + id;
     }
-
 }
