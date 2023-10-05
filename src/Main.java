@@ -19,6 +19,8 @@ public class Main {
         System.out.println(calculateAverageSalary(employees));
 
         printNames(employees);
+
+        indexSalary(employees, 10);
     }
 
     public static void printEmployees (Employee[] employees) {
@@ -66,6 +68,13 @@ public class Main {
     public static void printNames (Employee[] employees) {
         for (int i = 0; i < employees.length - 1 && employees[i] != null; i++) {
             System.out.println(employees[i].getName());
+        }
+    }
+
+    public static void indexSalary (Employee[] employees, int index) {
+        for (int i = 0; i < employees.length - 1 && employees[i] != null; i++) {
+            employees[i].setSalary(employees[i].getSalary() + index * employees[i].getSalary() / 100);
+            System.out.println(employees[i].getSalary());
         }
     }
 }
