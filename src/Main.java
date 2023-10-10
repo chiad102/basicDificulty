@@ -20,7 +20,7 @@ public class Main {
 
         printNames(employees);
 
-        indexSalary(employees, 10);
+        indexSalary(employees, 15);
     }
 
     public static void printEmployees (Employee[] employees) {
